@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="<%= name %>">
+	<head>
+		<meta charset="utf-8">
+		<title><%= nameCaps %></title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width">
+
+		<!-- bower:css -->
+		<!-- endbower -->
+		<link rel="stylesheet" href="<%= name %>.css" />
+    </head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<!-- Navigation -->
+				<div class="col-md-3">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation" class="active"><a ui-sref="<%= name %>"><%= nameCaps %></a></li>
+						<li role="presentation"><a href="/#!/home"><span class="glyphicon glyphicon-chevron-left"></span> Back</a></li>
+					</ul>
+				</div>
+
+				<!-- Spacer column -->
+				<div class="col-md-1"></div>
+
+				<!-- Main content -->
+				<div class="col-md-8">
+					<div ui-view></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+
+		<!-- bower:js -->
+		<!-- endbower -->
+		<script src="../app.js"></script>
+		<script src="<%= name %>.js"></script>
+		<script src="<%= nameCaps %>Ctrl.js"></script>
+	</body>
+</html>

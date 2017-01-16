@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="index">
+	<head>
+		<meta charset="utf-8">
+		<title><%= name %></title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width">
+
+		<!-- bower:css -->
+		<!-- endbower -->
+		<link rel="stylesheet" href="index.css" />
+    </head>
+	<body>
+
+		<!-- Bootstrap Navbar -->
+		<div class="navbar navbar-default">
+			<div class="container">
+				<!-- Navbar for mobile devices -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseable" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Navbar items -->
+				<div class="collapse navbar-collapse" id="collapseable">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a ui-sref="home">Home</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Main content -->
+		<div class="container">
+			<div ui-view></div>
+		</div>
+
+
+		<!-- Scripts -->
+
+		<!-- bower:js -->
+		<!-- endbower -->
+		<script src="../app.js"></script>
+		<script src="index.js"></script>
+		<script src="HomeCtrl.js"></script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "generator-meanerjs",
+  "version": "0.1.0",
+  "description": "A leaner MEAN stack generator allowing more customization with fewer unnecessary files.",
+  "keywords": [
+    "yeoman-generator",
+    "mean",
+    "stack"
+  ],
+  "files": [
+    "app",
+    "controller",
+    "view",
+    "uiroute",
+    "directive",
+    "filter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garrisoh/generator-meanerjs.git"
+  },
+  "homepage": "https://garrisoh.github.io/generator-meanerjs/",
+  "author": "Haley Garrison",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "wiredep": "^4.0.0",
+    "yeoman-generator": "^1.0.0",
+    "yosay": "^1.2.1"
+  }
+}
