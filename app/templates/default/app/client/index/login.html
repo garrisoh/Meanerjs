@@ -1,0 +1,21 @@
+<h1>Sign In</h1>
+
+<p>Not a member?  <a ui-sref="register">Register</a> instead.</p>
+<br>
+
+<form name="loginForm" ng-submit="lctrl.login(loginForm)">
+	<h4>Email:</h4>
+	<input name="email" type="email" ng-model="lctrl.email" required>
+	<!-- &nbsp;<span ng-show="loginForm.email.$valid" class="glyphicon glyphicon-ok" style="color:green;"></span> -->
+	<br><br>
+
+	<h4>Password:</h4>
+	<input name="pass" type="password" ng-model="lctrl.pass" required>
+	<!-- &nbsp;<span ng-show="loginForm.pass.$valid" class="glyphicon glyphicon-ok" style="color:green;"></span> -->
+	<br><br>
+
+	<button type="submit" class="btn btn-default">Login</button>
+</form>
+<br>
+<p ng-show="lctrl.errMsg" style="color:red;">{{lctrl.errMsg}}.</p>
+<p><a ui-sref="forgot">Forgot password?</a></p>

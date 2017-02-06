@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="index">
+	<head>
+		<meta charset="utf-8">
+		<title><%= name %></title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width">
+
+		<!-- bower:css -->
+		<!-- endbower -->
+		<link rel="stylesheet" href="index.css" />
+    </head>
+	<body style="padding-bottom:70px;">
+
+		<!-- Empty div to hold controller that redirects to profile when logged in -->
+		<div ng-controller="IndexCtrl" ng-show="false"></div>
+
+		<!-- Bootstrap Navbar -->
+		<div class="navbar navbar-default">
+			<div class="container">
+				<!-- Header that displays nav button (mobile devices) and brand home button -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseable" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collapseable (mobile) navigation items -->
+				<div class="collapse navbar-collapse" id="collapseable">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a ui-sref="home">Home</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a ui-sref="login">Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Angular view -->
+		<div class="container">
+			<div ui-view></div>
+		</div>
+
+
+		<!-- Scripts -->
+
+		<!-- bower:js -->
+		<!-- endbower -->
+		<script src="../app.js"></script>
+		<script src="index.js"></script>
+		<script src="IndexCtrl.js"></script>
+		<script src="HomeCtrl.js"></script>
+		<script src="LoginCtrl.js"></script>
+		<script src="RegisterCtrl.js"></script>
+		<script src="ForgotCtrl.js"></script>
+		<script src="ResetCtrl.js"></script>
+		<script src="validPassDir.js"></script>
+		<script src="validConfirmDir.js"></script>
+
+		<script src="//localhost:35729/livereload.js"></script>
+	</body>
+</html>

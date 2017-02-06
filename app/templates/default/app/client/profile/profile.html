@@ -1,0 +1,22 @@
+<h1>My Profile</h1>
+<br>
+<div ng-repeat="field in pctrl.fields">
+	<p style="font-size:18px;display:inline-block;" ng-mouseenter="pctrl.hover=field" ng-mouseleave="pctrl.hover=''">
+		<span style="font-weight:bold;">{{pctrl.labels[field]}}: </span>
+		<span ng-hide="pctrl.edit===field">{{pctrl.values[field]}}</span>
+		<button type="button" class="btn btn-default btn-xs" ng-show="pctrl.hover===field && pctrl.edit===''" ng-click="pctrl.editText=pctrl.values[field];pctrl.edit=field">
+			<span class="glyphicon glyphicon-pencil"></span>
+		</button>
+	</p>
+
+	<form name="form" class="form-inline" style="display:inline-block;"ng-submit="pctrl.save(form)" ng-show="pctrl.edit===field">
+		<input name="input" type="{{pctrl.type[field]}}" ng-model="pctrl.editText" required></input>
+		<button type="submit" class="btn btn-primary btn-xs">
+			<span class="glyphicon glyphicon-floppy-disk"></span>
+		</button>
+		<button type="button" class="btn btn-default btn-xs" ng-click="pctrl.edit='';pctrl.editText='';pctrl.errMsg=null;">
+			<span class="glyphicon glyphicon-ban-circle"></span>
+		</button>
+	</form>
+</div>
+<p ng-show="pctrl.errMsg" style="color:red;">{{pctrl.errMsg}}.</p>

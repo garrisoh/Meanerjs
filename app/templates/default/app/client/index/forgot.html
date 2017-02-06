@@ -1,0 +1,13 @@
+<h1>Forgot Password</h1>
+
+<p>Please enter the email associated with your account and a link to reset your password will be sent to you.</p>
+
+<form name="forgotForm" ng-submit="fctrl.sendResetLink(forgotForm)">
+	<h4>Email:</h4>
+	<input name="email" type="email" ng-model="fctrl.email" required>
+	<br><br>
+
+	<input type="submit" value="Send">
+</form>
+<br>
+<p ng-show="fctrl.errMsg" style="color:red;">{{fctrl.errMsg}}.</p>

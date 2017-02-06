@@ -1,0 +1,35 @@
+<h1>Register</h1>
+
+<p>Already a member?  <a ui-sref="login">Log in</a> instead.</p>
+<br>
+
+<form name="registerForm" ng-submit="rctrl.register(registerForm)">
+	<h4>First Name:</h4>
+	<input name="firstname" type="text" ng-model="rctrl.firstname" required>
+	&nbsp;<span ng-show="registerForm.firstname.$valid" class="glyphicon glyphicon-ok" style="color:green;"></span>
+	<br><br>
+
+	<h4>Last Name:</h4>
+	<input name="lastname" type="text" ng-model="rctrl.lastname" required>
+	&nbsp;<span ng-show="registerForm.lastname.$valid" class="glyphicon glyphicon-ok" style="color:green;"></span>
+	<br><br>
+
+	<h4>Email:</h4>
+	<input name="email" type="email" ng-model="rctrl.email" required>
+	&nbsp;<span ng-show="registerForm.email.$valid" class="glyphicon glyphicon-ok" style="color:green;"></span>
+	<br><br>
+
+	<h4>Password:</h4>
+	<input name="pass" type="password" ng-model="rctrl.pass" data-toggle="popover" data-trigger="focus" data-container="body" validate-password required>
+	&nbsp;<span ng-show="registerForm.pass.$valid" class="glyphicon glyphicon-ok" style="color:green;"></span>
+	<br><br>
+
+	<h4>Confirm Password:</h4>
+	<input name="passRep" type="password" ng-model="rctrl.passRep" validate-confirm="rctrl.pass" required>
+	&nbsp;<span ng-show="registerForm.passRep.$valid" class="glyphicon glyphicon-ok" style="color:green;"></span>
+	<br><br>
+
+	<button type="submit" class="btn btn-default">Register</button>
+</form>
+<br>
+<p ng-show="rctrl.errorMsg" style="color:red;">{{rctrl.errorMsg}}.</p>

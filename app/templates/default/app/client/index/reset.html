@@ -1,0 +1,17 @@
+<h1>Reset Password</h1>
+
+<p>To reset your password, enter a new password below.</p>
+
+<form name="resetForm" ng-submit="rsctrl.resetPassword(resetForm)">
+	<h4>New Password:</h4>
+	<input name="pass" type="password" ng-model="rsctrl.pass" data-toggle="popover" data-trigger="focus" data-container="body" validate-password required>
+	<br><br>
+
+	<h4>Confirm Password:</h4>
+	<input name="passRep" type="password" ng-model="rsctrl.passRep" validate-confirm="rsctrl.pass" required>
+	<br><br>
+
+	<input type="submit" value="Reset">
+</form>
+<br>
+<p ng-show="rsctrl.errMsg" style="color:red;">{{rsctrl.errMsg}}.</p>
